@@ -30,9 +30,12 @@ MonoBehaviour:
   - Track: 2
     Sprites:
     - {fileID: 21300000, guid: e2976d09b53264ffbbb9210a1ae1dcc0, type: 3}
+    - {fileID: 21300000, guid: e2976d09b53264ffbbb9210a1ae1dcc0, type: 3}
+    - {fileID: 21300000, guid: e2976d09b53264ffbbb9210a1ae1dcc0, type: 3}
     - {fileID: 21300000, guid: 598fb1767626f42e992bb9c2769d86ea, type: 3}
   - Track: 3
     Sprites:
+    - {fileID: 21300000, guid: 9878b6f1290ef41e88b30f08f68537fd, type: 3}
     - {fileID: 21300000, guid: 9878b6f1290ef41e88b30f08f68537fd, type: 3}
     - {fileID: 21300000, guid: 448d57c5e4c694686badaba281a6adff, type: 3}
   - Track: 4
