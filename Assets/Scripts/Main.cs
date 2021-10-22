@@ -9,19 +9,17 @@ namespace Platformer
         [SerializeField] private SpriteAnimatorConfig _playerConfig;
         [SerializeField] private SpriteAnimatorConfig _enemyConfig;
         [SerializeField] private int _animationSpeed = 10;
+
         [SerializeField] private LevelObjectView _playerView;
         [SerializeField] private LevelObjectView _enemyView;
+        [SerializeField] private CannonView _cannonView;
 
         private CameraController _cameraController;
-        // [SerializeField] private Transform _camera;
-        //[SerializeField] private Transform _back;
-
-
-
-        private ParalaxManager _paralaxManager;
         private SpriteAnimatorController _playerAnimator;
         private SpriteAnimatorController _enemyAnimator;
         private PlayerController _playerController;
+        private CannonController _cannonController;
+        private BulletEmitterController _bulletEmitterController;
 
 
         void Start()
@@ -39,9 +37,11 @@ namespace Platformer
                 _enemyAnimator = new SpriteAnimatorController(_enemyConfig);
                 _enemyAnimator.StartAnimation(_enemyView._spriteRenderer, AnimationState.Idle, true, _animationSpeed);
             }
-            // _paralaxManager = new ParalaxManager(_camera, _back);
 
             _cameraController = new CameraController(_playerView.transform, Camera.main.transform);
+
+            _cannonController = new CannonController(_cannonView._muzzleTransform, _playerView.transform);
+            _bulletEmitterController = new BulletEmitterController(_cannonView._bullets, _cannonView._emitterTransform);
         }
 
         
@@ -49,8 +49,9 @@ namespace Platformer
         {
             _enemyAnimator.Update();
             _cameraController.Update();
-            // _paralaxManager.Update();
             _playerController.Update();
+            _cannonController.Update();
+            _bulletEmitterController.Update();
         }
     }
 }

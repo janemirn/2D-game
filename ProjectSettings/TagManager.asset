@@ -41,14 +41,17 @@ TagManager:
   - name: Background
     uniqueID: 3555996659
     locked: 0
-  - name: Platform
-    uniqueID: 2751758349
-    locked: 0
   - name: Middleground
     uniqueID: 4109637651
     locked: 0
+  - name: Platform
+    uniqueID: 2751758349
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Guns
+    uniqueID: 476006075
     locked: 0
   - name: Foreground
     uniqueID: 2612486553
